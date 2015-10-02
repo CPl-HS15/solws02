@@ -13,7 +13,7 @@ void printheader(std::ostream &out,unsigned const limit) {
 }
 unsigned enterlimit(std::istream& in, std::ostream &out){
 	unsigned limit{};
-	while (in && (limit < 1 || limit > 30)){
+	while (in.good() && (limit < 1 || limit > 30)){
 		out << "enter limit (max 30):";
 		in >> limit;
 	}
